@@ -1,0 +1,42 @@
+/* Reset and base styles */
+* {
+    margin: 0; /* Removes default margin for all elements */
+    padding: 0; /* Removes default padding for all elements */
+    box-sizing: border-box; /* Includes padding and border in element’s width and height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Sets default font family */
+    background-color: #0a0a0a; /* Dark background color for the page */
+    color: #ffffff; /* White text color for readability */
+    line-height: 1.6; /* Sets line height for better readability */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #0a0a0a; /* Matches the page’s dark theme */
+    padding: 20px 0; /* Adds vertical padding for spacing */
+    position: fixed; /* Fixes header position on scroll */
+    width: 100%; /* Sets width to full screen */
+    top: 0; /* Positions the header at the top of the page */
+    z-index: 1000; /* Ensures the header appears above other elements */
+}
+
+nav {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between logo and navigation links */
+    align-items: center; /* Centers items vertically */
+    max-width: 1200px; /* Limits maximum width of nav content */
+    margin: 0 auto; /* Centers nav horizontally */
+    padding: 0 20px; /* Adds padding on left and right sides */
+}
+
+.logo {
+    font-size: 1.5rem; /* Sets font size for logo text */
+    font-weight: bold; /* Makes logo text bold */
+    color: #ffffff; /* White color for logo text */
+    text-decoration: none; /* Removes underline from logo link */
+}
+
+nav ul {
+    display: flex; /* Flexbox for h
