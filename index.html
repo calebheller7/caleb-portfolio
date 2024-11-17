@@ -150,22 +150,32 @@
 
     <!-- JavaScript for Animated Text -->
     <script>
-        const messages = ["Hi, I'm Caleb.", "I design.", "I code.", "I secure."];
-        let index = 0;
+    const messages = ["Hi, I'm Caleb.", "I design.", "I code.", "I secure."];
+    let index = 0;
+    const textElement = document.getElementById("animatedText");
 
-        function changeMessage() {
-            const textElement = document.getElementById("animatedText");
-            textElement.style.width = "0";
-            setTimeout(() => {
-                textElement.textContent = messages[index];
-                textElement.style.width = "100%";
-                index = (index + 1) % messages.length;
-            }, 500); // Delay to give the appearance of deleting
-        }
+    function changeMessage() {
+        // Clear any previous animation
+        textElement.style.width = "0";
+        
+        // Wait a moment before changing text
+        setTimeout(() => {
+            // Update text content
+            textElement.textContent = messages[index];
 
-        setInterval(changeMessage, 9000); // Rotate messages every 3 seconds
-        changeMessage(); // Initialize with the first message
-    </script>
+            // Restart the animation
+            textElement.style.width = "100%";
+
+            // Move to the next message
+            index = (index + 1) % messages.length;
+        }, 500); // Delay to simulate typing animation
+    }
+
+    // Only change the text once before moving to the next
+    setInterval(changeMessage, 4000); // Change the message every 4 seconds
+    changeMessage(); // Initialize with the first message
+</script>
+
 
 </body>
 </html>
