@@ -253,5 +253,30 @@ form textarea {
 .facebook:hover { background-color: #3b5998; } /* Facebook */
 .twitter:hover { background-color: #1DA1F2; } /* Twitter */
 .linkedin:hover { background-color: #0077b5; } /* LinkedIn */
-.email:hover { background-color: #007bff} /* Emaik */
+.email:hover { background-color: #007bff} /* Email */
 
+/* Styling for the "What Sets Me Apart?" text */
+.highlighted-text {
+    font-size: 1.50rem; /* Makes the text larger */
+    font-weight: bold; /* Makes the text bold */
+    color: #1d68ca; /* Sets the text color to yellow (adjust if necessary) */
+    margin-bottom: 1000px; /* Adds spacing below the text */
+    text-transform: uppercase; /* Optional: makes the text all uppercase for emphasis */
+}
+
+/* Platform-Specific Hover Colors */
+.github:hover { 
+    background-color: #333; /* Dark gray for GitHub */
+}
+
+/* Optional: You can style the GitHub button icon differently if you want */
+.github {
+    background-color: #1a1a1a; /* Dark background like other buttons */
+    color: #ffffff; /* White color for the icon */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
+
+/* GitHub icon inside the button (use Font Awesome for GitHub icon) */
+.github i {
+    font-size: 1.5rem; /* Adjust the icon size if needed */
+}
