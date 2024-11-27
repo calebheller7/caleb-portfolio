@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caleb Heller</title>
+    <title>Caleb Heller | Application Developer</title>
     <link rel="stylesheet" href="style.css"> <!-- Your existing CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -54,19 +54,22 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>As a cybersecurity enthusiast and emerging expert, I am passionate about designing innovative solutions to safeguard digital systems. During my internship with the Maryland Department of IT, I gained hands-on experience in securing infrastructure, conducting vulnerability assessments, and implementing effective security protocols.
-            With a strong foundation in cybersecurity and computer science, I have experience with tools such as Python, Splunk, and MySQL, and I am continually building my knowledge in areas like network security and AI applications in cybersecurity.
-            I am seeking opportunities to contribute to challenging projects in cybersecurity while continuing to grow and develop my skills. Let’s connect to explore how we can build a safer digital future together!</p>
-    </section>
+<section id="about">
+    <h2>About Me</h2>
+    <p class="highlighted-text">What Sets Me Apart?</p> <!-- Added class for styling -->
+    <p>As a cybersecurity enthusiast and emerging expert, I am passionate about designing innovative solutions to safeguard digital systems. During my internship with the Maryland Department of IT, I gained hands-on experience in securing infrastructure, conducting vulnerability assessments, and implementing effective security protocols.
+        With a strong foundation in cybersecurity and computer science, I have experience with tools such as Python, Splunk, and MySQL, and I am continually building my knowledge in areas like network security and AI applications in cybersecurity.
+        I am seeking opportunities to contribute to challenging projects in cybersecurity while continuing to grow and develop my skills. Let’s connect to explore how we can build a safer digital future together!</p>
+</section>
 
-     <!-- Resume Download Section -->
+
+   <!-- Resume Download Section -->
 <section id="resume">
     <h2>My Resume</h2>
     <p>Download my resume to learn more about my experience and qualifications.</p>
     <a href="Resume.pdf" download="Caleb_Heller_Resume.pdf" class="btn">Download Resume</a>
 </section>
+
 
     <!-- Skills Section -->
 <section id="skills">
@@ -83,10 +86,11 @@
             <p>Experienced in securing systems, conducting vulnerability assessments, and implementing robust security protocols.</p>
         </div>
         <div class="skill-item">
-            <i class="fas fa-search"></i> <!-- Search icon as a placeholder -->
-            <h3>Splunk</h3>
-            <p>Proficient in using Splunk for log analysis, monitoring, and real-time security event detection.</p>
+            <i class="fas fa-bug"></i> <!-- Search icon as a placeholder -->
+            <h3>Metasploit</h3>
+            <p>Proficient in using Metasploit for penetration testing, exploiting vulnerabilities, and conducting security assessments.</p>
         </div>
+        
     </div>
 </section>
 
@@ -103,7 +107,7 @@
             <li>Created a comprehensive platform featuring instructional videos, quizzes, and interactive content to educate businesses, individuals, and organizations on cybersecurity best practices.</li>
             <li>Designed content to cover various cybersecurity topics, enhancing user understanding and awareness through practical examples and assessments.</li>
         </ul>
-        <a href="https://cyberplatform.vercel.app/" target="_blank" class="btn">Visit Cyber Platform</a> <!-- Replace with your actual cyber platform URL -->
+        <a href="https://your-cyber-platform-link.com" target="_blank" class="btn">Visit Cyber Platform</a> <!-- Replace with your actual cyber platform URL -->
     </div>
     
     <!-- New Project: Personal Portfolio -->
@@ -146,36 +150,29 @@
         <a href="mailto:caleb.heller1856@icloud.com" target="_blank" class="social-btn email">
             <i class="fas fa-envelope"></i>
         </a>
+        <a href="https://github.com/calebheller7" class="social-btn github" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i> <!-- Font Awesome GitHub icon -->
+        </a>
     </div>
 
     <!-- JavaScript for Animated Text -->
     <script>
-    const messages = ["Hi, I'm Caleb.", "I design.", "I code.", "I secure."];
-    let index = 0;
-    const textElement = document.getElementById("animatedText");
+        const messages = ["Hi, I'm Caleb.", "I design.", "I code.", "I secure."];
+        let index = 0;
 
-    function changeMessage() {
-        // Clear any previous animation
-        textElement.style.width = "0";
-        
-        // Wait a moment before changing text
-        setTimeout(() => {
-            // Update text content
-            textElement.textContent = messages[index];
+        function changeMessage() {
+            const textElement = document.getElementById("animatedText");
+            textElement.style.width = "0";
+            setTimeout(() => {
+                textElement.textContent = messages[index];
+                textElement.style.width = "100%";
+                index = (index + 1) % messages.length;
+            }, 500); // Delay to give the appearance of deleting
+        }
 
-            // Restart the animation
-            textElement.style.width = "100%";
-
-            // Move to the next message
-            index = (index + 1) % messages.length;
-        }, 500); // Delay to simulate typing animation
-    }
-
-    // Only change the text once before moving to the next
-    setInterval(changeMessage, 4000); // Change the message every 4 seconds
-    changeMessage(); // Initialize with the first message
-</script>
-
+        setInterval(changeMessage, 9000); // Rotate messages every 3 seconds
+        changeMessage(); // Initialize with the first message
+    </script>
 
 </body>
-</html>
+</html> 
