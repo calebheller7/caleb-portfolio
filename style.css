@@ -194,6 +194,28 @@ form textarea {
     animation: fadeIn 1s ease-out; /* Applies fadeIn animation */
 }
 
+/* Animated typing text */
+.animated-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #00ffb3; /* Light neon green accent */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00ffb3;
+}
+
+/* Typing effect (runs once per message) */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {
