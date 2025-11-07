@@ -3,176 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caleb Heller | Application Developer</title>
-    <link rel="stylesheet" href="style.css"> <!-- Your existing CSS file -->
+    <title>Caleb Heller | Vulnerability Analyst & Entrepreneur</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-        /* Additional styling for animated text */
+        /* Animated typing text */
         .animated-text {
             font-size: 1.5rem;
             font-weight: 300;
-            color: #f7df1e;
+            color: #00ffb3;
             animation: typing 2s steps(22) infinite, blink 0.75s step-end infinite;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid #f7df1e;
+            border-right: 3px solid #00ffb3;
         }
+        @keyframes typing { from { width: 0; } to { width: 100%; } }
+        @keyframes blink { 50% { border-color: transparent; } }
 
-        /* Keyframes for typing and cursor blink animations */
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent; }
+        /* Subtle highlight for section headers */
+        .highlighted-text {
+            color: #00ffb3;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <a href="#home" class="logo">Caleb's Portfolio</a>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Navigation -->
+<header>
+    <nav>
+        <a href="#home" class="logo">Caleb Heller</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Hero Section with Animated Text -->
-    <section id="hero">
-        <img src="Headshot.jpg" alt="Caleb Heller" class="profile-pic"> <!-- Your profile picture -->
-        <h1>Hello, I'm Caleb Heller</h1>
-        <p class="animated-text" id="animatedText"></p> <!-- Animated Text -->
-        <a href="#contact" class="btn">Get in Touch</a>
-    </section>
-
-    <!-- About Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <p class="highlighted-text">What Sets Me Apart?</p> <!-- Added class for styling -->
-    <p>As a cybersecurity enthusiast and emerging expert, I am passionate about designing innovative solutions to safeguard digital systems. During my internship with the Maryland Department of IT, I gained hands-on experience in securing infrastructure, conducting vulnerability assessments, and implementing effective security protocols.
-        With a strong foundation in cybersecurity and computer science, I have experience with tools such as Python, Splunk, and MySQL, and I am continually building my knowledge in areas like network security and AI applications in cybersecurity.
-        I am seeking opportunities to contribute to challenging projects in cybersecurity while continuing to grow and develop my skills. Let’s connect to explore how we can build a safer digital future together!</p>
+<!-- Hero -->
+<section id="hero">
+    <img src="Headshot.jpg" alt="Caleb Heller" class="profile-pic">
+    <h1>Hey, I'm Caleb Heller</h1>
+    <p class="animated-text" id="animatedText"></p>
+    <a href="#contact" class="btn">Let’s Connect</a>
 </section>
 
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <p class="highlighted-text">Faith. Security. Innovation.</p>
+    <p>
+        I’m a <strong>Vulnerability Analyst</strong> at <strong>The Agora Companies</strong>, passionate about 
+        strengthening digital infrastructure through automation, data visibility, and threat intelligence.
+        My journey bridges <strong>cybersecurity</strong>, <strong>entrepreneurship</strong>, and <strong>faith-driven purpose</strong> —
+        building systems that protect and prosper.
+    </p>
+    <p>
+        Beyond tech, I lead ventures in <strong>real estate investment</strong> and <strong>landscaping</strong>,
+        using business as a platform for ownership, discipline, and impact. My mission is to bridge
+        <em>faith, technology, and wealth-building</em> to empower others to build securely — in every sense.
+    </p>
+</section>
 
-   <!-- Resume Download Section -->
+<!-- Resume -->
 <section id="resume">
-    <h2>My Resume</h2>
-    <p>Download my resume to learn more about my experience and qualifications.</p>
+    <h2>Resume</h2>
+    <p>Download my latest resume to explore my technical experience and certifications.</p>
     <a href="Resume.pdf" download="Caleb_Heller_Resume.pdf" class="btn">Download Resume</a>
 </section>
 
-
-    <!-- Skills Section -->
+<!-- Skills -->
 <section id="skills">
     <h2>Skills</h2>
     <div class="skills-container">
         <div class="skill-item">
             <i class="fab fa-python"></i>
-            <h3>Python</h3>
-            <p>Skilled in using Python for cybersecurity automation, data analysis, and AI model development.</p>
+            <h3>Python & Automation</h3>
+            <p>Automation scripts for vulnerability triage, data analysis, and report generation using Pandas and APIs.</p>
         </div>
         <div class="skill-item">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Cybersecurity</h3>
-            <p>Experienced in securing systems, conducting vulnerability assessments, and implementing robust security protocols.</p>
+            <i class="fas fa-bug"></i>
+            <h3>Vulnerability Management</h3>
+            <p>Hands-on experience with Tenable, OpenVAS, and CVSS scoring for threat prioritization and remediation tracking.</p>
         </div>
         <div class="skill-item">
-            <i class="fas fa-bug"></i> <!-- Search icon as a placeholder -->
-            <h3>Metasploit</h3>
-            <p>Proficient in using Metasploit for penetration testing, exploiting vulnerabilities, and conducting security assessments.</p>
+            <i class="fas fa-database"></i>
+            <h3>Data & Log Analysis</h3>
+            <p>Utilizing Graylog and Power BI for visibility into vulnerabilities, incidents, and system performance.</p>
         </div>
-        
     </div>
 </section>
 
-
-    <!-- Projects Section -->
+<!-- Projects -->
 <section id="projects">
     <h2>Projects</h2>
-    
-    <!-- New Project: Cyber Platform Link -->
+
     <div class="project-item fade-in">
-        <h3>Cybersecurity Education & Awareness Platform</h3>
+        <h3>Vulnerability Management & Automation Home Lab</h3>
+        <p class="project-date">October 2025 – Present</p>
+        <ul>
+            <li>Built a full enterprise-like lab using Kali Linux, Windows Server, and Ubuntu to simulate real-world vulnerability lifecycles.</li>
+            <li>Automated reporting with Python and Power BI dashboards to visualize severity trends and false positives.</li>
+            <li>Integrated Graylog for log correlation and n8n workflows for automated report generation.</li>
+        </ul>
+    </div>
+
+    <div class="project-item fade-in">
+        <h3>Vulnerability Analysis Workflows | The Agora Companies</h3>
+        <p class="project-date">November 2025 – Present</p>
+        <ul>
+            <li>Automating the report preparation process for weekly vulnerability reviews using Tenable Cloud and Python scripting.</li>
+            <li>Developing AI-assisted log triage and Jira dashboards for issue tracking and remediation progress.</li>
+        </ul>
+    </div>
+
+    <div class="project-item fade-in">
+        <h3>Cybersecurity Education Platform</h3>
         <p class="project-date">June 2024</p>
         <ul>
-            <li>Created a comprehensive platform featuring instructional videos, quizzes, and interactive content to educate businesses, individuals, and organizations on cybersecurity best practices.</li>
-            <li>Designed content to cover various cybersecurity topics, enhancing user understanding and awareness through practical examples and assessments.</li>
+            <li>Created a learning site with interactive content teaching cybersecurity principles to students and small businesses.</li>
         </ul>
-        <a href="https://cyberplatform.vercel.app/" target="_blank" class="btn">Visit Cyber Platform</a> <!-- Replace with your actual cyber platform URL -->
+        <a href="https://cyberplatform.vercel.app/" target="_blank" class="btn">Visit Cyber Platform</a>
     </div>
-    
-    <!-- New Project: Personal Portfolio -->
-    <div class="project-item fade-in">
-        <h3>Personal Portfolio Website</h3>
-        <p class="project-date">November 2024</p>
-        <ul>
-            <li>Developed a personal portfolio website to showcase my skills, projects, and professional background.</li>
-            <li>Utilized HTML, CSS, and JavaScript to create a responsive and visually appealing layout.</li>
-        </ul>
-    </div>
-
-
-
 </section>
 
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+<!-- Side Social Buttons -->
+<div class="side-social-buttons">
+    <a href="https://www.instagram.com/caleb.heller7" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/caleb-heller-0a0132280/" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:caleb.heller1856@icloud.com" target="_blank" class="social-btn email"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/calebheller7" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
+</div>
 
-    <!-- Side Social Buttons -->
-    <div class="side-social-buttons">
-        <a href="https://www.instagram.com/caleb.heller7" target="_blank" class="social-btn instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/caleb-heller-0a0132280/" target="_blank" class="social-btn linkedin">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:caleb.heller1856@icloud.com" target="_blank" class="social-btn email">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://github.com/calebheller7" class="social-btn github" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i> <!-- Font Awesome GitHub icon -->
-        </a>
-    </div>
-
-    <!-- JavaScript for Animated Text -->
-    <script>
-        const messages = ["Hi, I'm Caleb.", "I design.", "I code.", "I secure."];
-        let index = 0;
-
-        function changeMessage() {
-            const textElement = document.getElementById("animatedText");
-            textElement.style.width = "0";
-            setTimeout(() => {
-                textElement.textContent = messages[index];
-                textElement.style.width = "100%";
-                index = (index + 1) % messages.length;
-            }, 500); // Delay to give the appearance of deleting
-        }
-
-        setInterval(changeMessage, 9000); // Rotate messages every 3 seconds
-        changeMessage(); // Initialize with the first message
-    </script>
+<!-- Animated Text JS -->
+<script>
+    const messages = ["I secure systems.", "I build automation.", "I create impact.", "I lead with faith."];
+    let index = 0;
+    function changeMessage() {
+        const textElement = document.getElementById("animatedText");
+        textElement.style.width = "0";
+        setTimeout(() => {
+            textElement.textContent = messages[index];
+            textElement.style.width = "100%";
+            index = (index + 1) % messages.length;
+        }, 500);
+    }
+    setInterval(changeMessage, 5000);
+    changeMessage();
+</script>
 
 </body>
-</html> 
+</html>
