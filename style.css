@@ -5,6 +5,10 @@
     box-sizing: border-box; /* Includes padding and border in element’s width and height */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif; /* Sets default font family */
     background-color: #0a0a0a; /* Dark background color for the page */
@@ -58,6 +62,17 @@ nav ul li a:hover {
     color: #007bff; /* Changes color to blue on hover */
 }
 
+/* Nav CTA */
+.nav-cta {
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.nav-cta:hover {
+    background: #007bff;
+    color: #ffffff;
+}
+
 /* Hero Section */
 #hero {
     height: 100vh; /* Full-screen height for hero section */
@@ -67,17 +82,6 @@ nav ul li a:hover {
     align-items: center; /* Centers content horizontally */
     text-align: center; /* Centers text */
     padding: 0 20px; /* Adds padding on sides */
-}
-
-/* === Enhanced Hero and Profile Picture Styling === */
-#hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
 }
 
 .profile-pic {
@@ -104,20 +108,13 @@ nav ul li a:hover {
     margin-bottom: 25px;
 }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-    .profile-pic {
-        width: 160px;
-        height: 160px;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    #hero p {
-        font-size: 1rem;
-    }
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 /* Sections */
@@ -138,6 +135,15 @@ section h2 {
     text-align: center; /* Centers about text */
     max-width: 800px; /* Limits width for better readability */
     margin: 0 auto; /* Centers paragraph horizontally */
+}
+
+/* Highlighted text */
+.highlighted-text {
+    font-size: 1.50rem; /* Makes the text larger */
+    font-weight: bold; /* Makes the text bold */
+    color: #1d68ca; /* Accent */
+    margin-bottom: 18px; /* Adds spacing below the text */
+    text-transform: uppercase; /* Optional: makes the text all uppercase for emphasis */
 }
 
 /* Skills Section */
@@ -166,6 +172,7 @@ section h2 {
     padding: 20px; /* Padding for spacing */
     border-radius: 5px; /* Rounded corners */
     margin-bottom: 20px; /* Space between project items */
+    transition: all 0.3s ease;
 }
 
 .project-item h3 {
@@ -173,27 +180,26 @@ section h2 {
     margin-bottom: 10px; /* Space below title */
 }
 
-/* Contact Section */
+.project-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+}
 
-.form-status {
-    text-align: center;
+/* Project stack + links */
+.project-stack {
+    color: #b3b3b3;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.project-links {
     margin-top: 12px;
-    font-size: 1rem;
-    color: #b3b3b3;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.form-status.sending {
-    color: #b3b3b3;
-}
-
-.form-status.success {
-    color: #00ffb3;
-}
-
-.form-status.error {
-    color: #ff6b6b;
-}
-
+/* Contact Section */
 form {
     max-width: 600px; /* Limits form width */
     margin: 0 auto; /* Centers form */
@@ -215,6 +221,27 @@ form textarea {
     border-radius: 5px; /* Rounded corners */
 }
 
+/* Honeypot (spam trap) */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* Form status */
+.form-status {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+.form-status.sending { color: #b3b3b3; }
+.form-status.success { color: #00ffb3; }
+.form-status.error { color: #ff6b6b; }
+
 /* Buttons */
 .btn {
     display: inline-block; /* Inline-block button */
@@ -232,19 +259,18 @@ form textarea {
     background-color: #0056b3; /* Darker blue color on hover */
 }
 
-.project-stack {
-    color: #b3b3b3;
-    margin-top: 10px;
-    font-size: 0.95rem;
+.btn-outline {
+    background: transparent;
+    border: 1px solid #007bff;
+}
+.btn-outline:hover {
+    background: #007bff;
 }
 
-.project-links {
-    margin-top: 12px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+.btn[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
-
 
 /* Animations */
 @keyframes fadeIn {
@@ -264,41 +290,6 @@ form textarea {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #00ffb3;
-}
-
-/* Typing effect (runs once per message) */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-/* Blinking cursor */
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stacks nav items vertically on small screens */
-    }
-
-    nav ul {
-        margin-top: 20px; /* Adds top margin for nav items */
-    }
-
-    nav ul li {
-        margin: 0 10px; /* Reduces spacing for smaller screens */
-    }
-
-    #hero h1 {
-        font-size: 2.5rem; /* Smaller heading size for hero on small screens */
-    }
-
-    section h2 {
-        font-size: 2rem; /* Smaller section heading size */
-    }
 }
 
 /* Side Social Buttons */
@@ -334,84 +325,73 @@ form textarea {
 
 /* Platform-Specific Hover Colors */
 .instagram:hover { background-color: #C13584; } /* Instagram */
-.facebook:hover { background-color: #3b5998; } /* Facebook */
-.twitter:hover { background-color: #1DA1F2; } /* Twitter */
 .linkedin:hover { background-color: #0077b5; } /* LinkedIn */
-.email:hover { background-color: #007bff} /* Email */
+.email:hover { background-color: #007bff; } /* Email */
+.github:hover { background-color: #333; } /* GitHub */
 
-/* Styling for the "What Sets Me Apart?" text */
-.highlighted-text {
-    font-size: 1.50rem; /* Makes the text larger */
-    font-weight: bold; /* Makes the text bold */
-    color: #1d68ca; /* Sets the text color to yellow (adjust if necessary) */
-    margin-bottom: 18px; /* Adds spacing below the text */
-    text-transform: uppercase; /* Optional: makes the text all uppercase for emphasis */
+/* Footer socials */
+.site-footer {
+    padding: 30px 20px;
+    text-align: center;
+    color: #b3b3b3;
 }
 
-/* Platform-Specific Hover Colors */
-.github:hover { 
-    background-color: #333; /* Dark gray for GitHub */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
-/* Optional: You can style the GitHub button icon differently if you want */
-.github {
-    background-color: #1a1a1a; /* Dark background like other buttons */
-    color: #ffffff; /* White color for the icon */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+.footer-socials a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-/* GitHub icon inside the button (use Font Awesome for GitHub icon) */
-.github i {
-    font-size: 1.5rem; /* Adjust the icon size if needed */
+.footer-socials a:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
 }
 
-.project-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
-    transition: all 0.3s ease;
+.footer-note {
+    font-size: 0.95rem;
 }
 
-.nav-cta {
-  border: 1px solid #007bff;
-  padding: 8px 12px;
-  border-radius: 6px;
-}
-.nav-cta:hover {
-  background: #007bff;
-  color: #ffffff;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stacks nav items vertically on small screens */
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    nav ul {
+        margin-top: 20px; /* Adds top margin for nav items */
+    }
 
-html { scroll-behavior: smooth; }
+    nav ul li {
+        margin: 0 10px; /* Reduces spacing for smaller screens */
+    }
 
-.hero-buttons { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:10px; }
-.btn-outline { background: transparent; border: 1px solid #007bff; }
-.btn-outline:hover { background: #007bff; }
+    .profile-pic {
+        width: 160px;
+        height: 160px;
+    }
 
-.honeypot {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-}
+    #hero h1 {
+        font-size: 2rem;
+    }
 
-.form-status {
-  text-align: center;
-  margin-top: 12px;
-  font-size: 1rem;
-  color: #b3b3b3;
-}
+    #hero p {
+        font-size: 1rem;
+    }
 
-.form-status.sending { color: #b3b3b3; }
-.form-status.success { color: #00ffb3; }
-.form-status.error { color: #ff6b6b; }
+    section h2 {
+        font-size: 2rem; /* Smaller section heading size */
+    }
 
-.btn[disabled] {
-  opacity: 0.7;
-  cursor: not-allowed;
+    /* Hide side social buttons on mobile */
+    .side-social-buttons {
+        display: none;
+    }
 }
